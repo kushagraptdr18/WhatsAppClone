@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    *{
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+    
+    html, body {
+        height: 100%;
+        width: 100%;
+        background-color: wheat;
+    }
+
+    form{
+        width: 400px;
+        height: fit-content;
+        padding: 20px;
+        background-color: gray;
+        border-radius: 30px;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        align-items: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+    input{
+        padding: 20px;
+        background-color: transparent;
+        border: 1px solid wheat;
+        font-size: 20px;
+        color: wheat;
+        font-family: kinta;
+        border-radius: 20px;
+        outline: none;
+
+    }
+    input::placeholder{
+        color: wheat;
+        
+    }
+    form h1{
+        color: wheat;
+        font-size: 40px;
+        font-family: Gilroy;
+    }
+
+    h1{
+        font-size: 11vw;
+        text-align: center;
+        color: gray;
+        font-family: Gilroy;
+        margin-top: 2vh;
+        margin-bottom: 2vh;
+    }
+    #images{
+        width: 100%;
+        height: 100%;
+        padding: 10px;
+        position: absolute;
+        z-index: 99;
+        top: 10%;
+        left: 10%;
+        transform: translate(-10%,-10%);
+        opacity: 0;
+        cursor: pointer;
+
+    }
+    #image{
+        position: relative;
+        width: 70%;
+        /* background-color: blue; */
+        padding: 10px;
+        border-radius: 20px;
+        cursor: pointer;
+        cursor: pointer;
+
+
+    }
+    button{
+        position: relative;
+        width: 100%;
+        /* background-color: blue; */
+        height: 100%;
+        padding: 20px;
+        background-color: transparent;
+        border-radius: 20px;
+        color: wheat;
+        cursor: pointer;
+        border: 1px solid wheat;
+        font-size: 20px;
+        font-family: kinta;
+    }
+
+</style>
+<body>
+
+     
+    <form action="/register" method="post" enctype="multipart/form-data">
+
+        <h1>Create Account</h1>
+
+        <input type="text" name="name" placeholder="Enter Your Name">
+        <input type="text" name="email" placeholder="Enter Your email">
+        <input type="password" name="password" placeholder="Enter Your password">
+        <div id="image">
+            <input id="images" type="file" name="image">
+            <button>Upload Image</button>
+        </div>
+        <input type="submit" value="submit">
+
+    </form>
+    
+</body>
+</html>
